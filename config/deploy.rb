@@ -1,18 +1,14 @@
-require 'daddy/capistrano/remote_cache_subdir'
-
 set :default_run_options, :pty => true
 set :use_sudo, false
 
 set :application, "careerlife"
-set :repository,  "git://github.com/ichylinux/daddy.git"
+set :repository,  "git://github.com/ichylinux/careerlife.git"
 set :scm, :git
 set :branch, 'master'
 
 set :user, ENV['USER']
 set :deploy_via, :remote_cache
 set :deploy_to, "/home/#{user}/apps/#{application}"
-set :deploy_subdir, application
-set :strategy, Daddy::Capistrano::RemoteCacheSubdir.new(self)
 
 #set :asset_env, "#{asset_env} RAILS_RELATIVE_URL_ROOT=/careerlife"
 
