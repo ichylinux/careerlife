@@ -1,47 +1,36 @@
 # language: ja
 
-機能: 新規プロジェクト作成
+機能: 2013-11-01
 
-サンプルプロジェクトとして業務経験・スキル管理サイト「careerlife」を
-作成します。
-
-シナリオ: Railsアプリを新規作成
-
-  * rails new careerlife -d mysql
+  シナリオ: Railsアプリを新規作成
+    * rails _3.2.15_ new careerlife -d mysql --skip-bundle
   
-シナリオ: ライブラリをインストール
+  シナリオ: ライブラリをインストール
+    以下のライブラリをインストールします。
 
-以下のライブラリをインストールします。
+    daddy        ・・・ Railsアプリ開発をサポートするユーティリティ
+    therubyracer ・・・ ExecJS が利用するJavaScript実行環境。Chromeが搭載しているV8 Engineを利用。
+    unicorn      ・・・ アプリケーションサーバ
 
-daddy        ・・・ Railsアプリ開発をサポートするユーティリティ
-execjs       ・・・ RubyからJavaScriptの実行を可能にする
-therubyracer ・・・ ExecJS が利用するJavaScript実行環境。Chromeが搭載しているV8 Engineを利用。
-unicorn      ・・・ アプリケーションサーバ
+    * Gemfileを編集
+    * sudo bundle install
 
-  * Gemfileを編集
-  * sudo bundle install
+  シナリオ: Daddyをインストール
+    * rake dad:install
 
-シナリオ: Daddyをインストール
-
-  * rake dad:install
-
-シナリオ: Unicornをインストール
-
-  * rake dad:unicorn:install
+  シナリオ: Unicornをインストール
+    * rake dad:unicorn:install
   
-シナリオ: Nginxをインストール
+  シナリオ: Nginxをインストール
+    * rake dad:nginx:install
 
-  * rake dad:nginx:install
+  シナリオ: データベースを作成
+    * rake dad:db:config
+    * rake dad:db:create
+    * rake db:migrate
 
-シナリオ: データベースを作成
-
-  * rake dad:db:config
-  * rake dad:db:create
-  * rake db:migrate
-
-シナリオ: アプリを機動
-
-  * sudo service nginx start
-  * sudo service unicorn start
-  * ブラウザで http://localhost にアクセス
+  シナリオ: アプリを機動
+    * sudo service nginx start
+    * sudo service unicorn_careerlife_dev start
+    * ブラウザで http://localhost にアクセス
 
