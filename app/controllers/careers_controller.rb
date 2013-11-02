@@ -32,6 +32,11 @@ class CareersController < ApplicationController
     end
   end
 
+  def new_career_detail
+    @career_detail = CareerDetail.new
+    render :partial => 'career_detail_fields', :locals => {:career_detail => @career_detail, :index => params[:index]}
+  end
+
   # GET /careers/1/edit
   def edit
     @career = Career.find(params[:id])

@@ -1,5 +1,9 @@
 Careerlife::Application.routes.draw do
-  resources :careers
+  resources :careers do
+    collection do
+      get 'new_career_detail'
+    end
+  end
 
 
   # The priority is based upon order of creation:
