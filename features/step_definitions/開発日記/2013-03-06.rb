@@ -1,21 +1,10 @@
 # coding: UTF-8
 
-もし /^rails g controller top --no-assets --no-helper$/ do
-  show 'app/controllers/top_controller.rb', :as => 'auto'
-  show 'test/functional/top_controller_test.rb', :as => 'auto'
+前提 /^rails g scaffold career last_name:string first_name:string birthday:date gender:string$/ do
+  git_diff_name 'app', 'db', 'test'
 end
 
-もし /^indexページを作成$/ do
-  show 'app/views/top/index.html.erb', :as => 'new'
+前提 /^rake db:migrate$/ do
+  git_diff 'db/schema.rb', :as => 'auto'
 end
 
-もし /^ルートパスの指定を変更$/ do
-  git_diff 'config/routes.rb', :as => 'edit', :from => 49, :to => 52
-end
-
-もし /^rm public\/index\.html$/ do
-end
-
-もし /^ブラウザで http:\/\/localhost にアクセス$/ do
-  assert_visit '/'
-end

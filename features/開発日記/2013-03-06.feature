@@ -1,10 +1,7 @@
 # language: ja
 
-機能: 2013-11-01
+機能:
 
-  シナリオ: トップ画面を変更
-    * rm public/index.html
-    * rails g controller top --no-assets --no-helper
-    * ルートパスの指定を変更
-    * indexページを作成
-    * ブラウザで http://localhost にアクセス
+シナリオ: キャリアの登録画面を作成
+  * rails g scaffold career last_name:string first_name:string birthday:date gender:string
+  * rake db:migrate
