@@ -1,7 +1,7 @@
 # coding: UTF-8
 
 前提 /^Gemfileを編集$/ do
-  git_diff 'Gemfile', :from => 34, :to => 35
+  git_diff 'Gemfile', :from => 33
 end
 
 前提 /^capify \./ do
