@@ -1,5 +1,9 @@
 # coding: UTF-8
 
+前提(/^ログインに遷移$/) do
+  assert_visit '/users/sign_in'
+end
+
 前提 /^キャリアを表示$/ do
   assert_visit '/careers'
 end
@@ -12,7 +16,7 @@ end
   assert_url '/careers'
 end
 
-前提 /^TOPページを表示$/ do
+前提 /^トップページを表示$/ do
   assert_visit '/'
 end
 

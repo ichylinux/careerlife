@@ -1,4 +1,6 @@
 class CareersController < ApplicationController
+  before_filter :authenticate_user!
+
   # GET /careers
   # GET /careers.json
   def index
