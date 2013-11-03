@@ -22,6 +22,7 @@ group :assets do
 end
 
 gem 'devise'
+gem 'flog'
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
 gem 'thin'
