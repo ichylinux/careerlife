@@ -1,7 +1,7 @@
 # coding: UTF-8
 
 前提 /^Gemfile に jquery\-ui\-rails を追加$/ do
-  git_diff 'Gemfile', :from => 20, :to => 24
+  git_diff 'Gemfile', :from => 24, :to => 27
 end
 
 前提 /^sudo bundle install$/ do
