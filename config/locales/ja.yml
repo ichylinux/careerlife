@@ -8,6 +8,7 @@ ja:
     attributes:
       career:
         introduction: 紹介文
+        work_experience: 業務経験
 
       career_detail:
         project_name: プロジェクト名
