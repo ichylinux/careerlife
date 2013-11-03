@@ -5,7 +5,7 @@
 end
 
 前提 /^sudo bundle install$/ do
-  git_diff 'Gemfile.lock', :as => 'auto'
+  git_diff 'Gemfile.lock', :as => 'auto', :from => 222
 end
 
 前提 /^アセットに datepicker を追加$/ do
