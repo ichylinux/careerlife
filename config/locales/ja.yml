@@ -3,6 +3,7 @@ ja:
     models:
       career: キャリア
       career_detail: 経歴
+      user: 基本情報
       
     attributes:
       career:
@@ -17,6 +18,7 @@ ja:
         project_name: プロジェクト名
 
       user:
+        age: 年齢
         birthday: 生年月日
         email: メールアドレス
         first_name: 名

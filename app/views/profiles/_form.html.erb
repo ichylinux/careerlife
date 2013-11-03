@@ -6,17 +6,11 @@
   </script>
 
   <%= form_for(@user, :url => {:action => 'update', :id => @user.id}, :method => 'put') do |f| %>
-    <% if @user.errors.any? %>
-      <div id="error_explanation">
-        <h2><%= @user.errors.count %> 件のエラーがあります。</h2>
-        <ul>
-          <% @user.errors.full_messages.each do |msg| %>
-            <li><%= msg %></li>
-          <% end %>
-        </ul>
-      </div>
-    <% end %>
-
+    <%= render_errors @user %>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+    <br />
     <div>
       <%= f.label :last_name %><br />
       <%= f.text_field :last_name %>
@@ -34,8 +28,6 @@
       <%= f.select :gender, User::GENDERS.invert %>
     </div>
     
-    <div class="actions">
-      <%= f.submit %>
-    </div>
+
   <% end %>
 </div>

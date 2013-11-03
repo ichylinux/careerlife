@@ -1,27 +1,7 @@
-<p id="notice"><%= notice %></p>
+<%= render_notices %>
 
-<p>
-  <b><%= User.human_attribute_name :last_name %>:</b>
-  <%= @career.user.last_name %>
-</p>
-
-<p>
-  <b><%= User.human_attribute_name :first_name %>:</b>
-  <%= @career.user.first_name %>
-</p>
-
-<p>
-  <b><%= User.human_attribute_name :birthday %>:</b>
-  <%= @career.user.birthday %>
-</p>
-
-<p>
-  <b><%= User.human_attribute_name :gender %>:</b>
-  <%= @career.user.gender_name %>
-</p>
-
-<table>
-  <caption><%= Career.human_attribute_name :introduction %></caption>
+<%= Career.human_attribute_name :introduction %>
+<table class="solid">
   <tr>
     <td><%= html_line_break(@career.introduction) %></td>
   </tr>
@@ -30,5 +10,4 @@
 <%= render 'show_career_details' %>
 
 <%= link_to '編集', edit_career_path(@career) %> |
-<%= link_to '削除', @career, method: :delete, data: { confirm: "#{@career.user.full_name} さんのキャリアを削除します。よろしいですか？" } %> |
-<%= link_to '戻る', careers_path %>
+<%= link_to '削除', @career, method: :delete, data: { confirm: "#{@career.user.full_name} さんのキャリアを削除します。よろしいですか？" } %>
