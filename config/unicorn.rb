@@ -1,15 +1,11 @@
 # coding: UTF-8
 
-require 'yaml'
-
 rails_root = "#{File.dirname(File.expand_path(__FILE__))}/.."
-rails_env = ENV['RAILS_ENV'] || 'development'
 
 worker_processes 2
 working_directory rails_root
 
-database = YAML.load_file("#{File.dirname(__FILE__)}/database.yml")[rails_env]['database']
-listen "/tmp/#{database}.sock"
+listen '/tmp/unicorn.sock'
 
 stdout_path rails_root + '/log/unicorn.log'
 stderr_path rails_root + '/log/unicorn.log'

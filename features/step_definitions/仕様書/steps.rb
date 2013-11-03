@@ -1,15 +1,5 @@
 # coding: UTF-8
 
-前提 /^ログインに遷移$/ do
-  assert_visit '/users/sign_in'
-end
-
-前提 /^(.*?) がログイン$/ do |email|
-  fill_in 'メールアドレス', :with => email
-  fill_in 'パスワード', :with => 'testtest'
-  click_on 'ログイン'
-end
-
 前提 /^キャリアを表示$/ do
   assert_visit '/careers'
 end
@@ -22,12 +12,29 @@ end
   assert_url '/careers'
 end
 
+前提 /^キャリアの一覧を表示している$/ do
+  assert_visit '/careers'
+end
+
+ならば /^キャリアの追加に遷移$/ do
+  assert_url '/careers/new'
+end
+
 前提 /^キャリアの編集に遷移$/ do
   assert_url '/careers/[0-9]+/edit'
 end
 
-前提 /^トップページを表示$/ do
+前提 /^キャリアの参照を表示(している|する)$/ do |suffix|
+  @career = Career.all.first
+  assert_visit "/careers/#{@career.id}"
+end
+
+前提 /^トップページを表示(している|する)$/ do |suffix|
   assert_visit '/'
+end
+
+前提 /^トップページに遷移$/ do
+  assert_url '^/$'
 end
 
 もし /^経歴を追加 を (.*?) 回クリック$/ do |count|
@@ -48,6 +55,8 @@ end
   
   find('table').all('tr')[1..-2].each_with_index do |tr, i|
     tr.all('td')[0].find('input').set(table[i][0])
+    tr.all('td')[1].find('input').set(table[i][1])
+    tr.all('td')[2].find('input').set(table[i][2])
   end
   
   capture

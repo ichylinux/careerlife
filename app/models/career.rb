@@ -1,7 +1,7 @@
 # coding: UTF-8
 
 class Career < ActiveRecord::Base
-  
+
   has_many :career_details
   accepts_nested_attributes_for :career_details, :allow_destroy => true
 
@@ -11,7 +11,7 @@ class Career < ActiveRecord::Base
   def full_name
     self.last_name.to_s + self.first_name.to_s
   end
-  
+
   def gender_name
     return nil unless self.gender
 
