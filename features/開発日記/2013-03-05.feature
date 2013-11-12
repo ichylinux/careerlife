@@ -1,6 +1,6 @@
 # language: ja
 
-機能: 2013-11-01
+機能: 2013-11-12更新
 
   シナリオ: Railsアプリを新規作成
     * rails _3.2.15_ new careerlife -d mysql --skip-bundle
