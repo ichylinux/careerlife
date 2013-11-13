@@ -1,6 +1,6 @@
 # language: ja
 
-機能: プロフィール
+機能:
 
 シナリオ: 参照
   前提 user1@example.com がログインしている

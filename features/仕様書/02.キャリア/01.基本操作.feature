@@ -1,6 +1,6 @@
 # language: ja
 
-機能: 基本操作
+機能:
 
 シナリオ: 一覧
   前提 user1@example.com がログインしている
