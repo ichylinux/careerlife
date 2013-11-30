@@ -23,10 +23,9 @@ gem 'flog'
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
 gem 'mysql2'
-gem 'thin'
 
-group :test do
-  gem 'capybara-webkit', :platforms => :ruby, :require => false
+group :development, :test do
+  gem 'thin'
 end
 
 # To use ActiveModel has_secure_password
