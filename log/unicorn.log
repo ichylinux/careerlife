@@ -1,0 +1,30 @@
+I, [2013-08-18T01:35:33.071371 #8074]  INFO -- : Refreshing Gem list
+I, [2013-08-18T01:35:43.537420 #8074]  INFO -- : unlinking existing socket=/tmp/unicorn.sock
+I, [2013-08-18T01:35:43.537718 #8074]  INFO -- : listening on addr=/tmp/unicorn.sock fd=13
+I, [2013-08-18T01:35:43.542237 #8074]  INFO -- : master process ready
+I, [2013-08-18T01:35:43.586083 #8105]  INFO -- : worker=1 ready
+I, [2013-08-18T01:35:43.593741 #8102]  INFO -- : worker=0 ready
+I, [2013-08-18T01:42:43.433212 #8074]  INFO -- : reaped #<Process::Status: pid 8102 exit 0> worker=0
+I, [2013-08-18T01:42:43.433522 #8074]  INFO -- : reaped #<Process::Status: pid 8105 exit 0> worker=1
+I, [2013-08-18T01:42:43.433935 #8074]  INFO -- : master complete
+I, [2013-08-18T01:43:33.235056 #2934]  INFO -- : Refreshing Gem list
+I, [2013-08-18T01:43:40.395522 #2934]  INFO -- : unlinking existing socket=/tmp/unicorn.sock
+I, [2013-08-18T01:43:40.395784 #2934]  INFO -- : listening on addr=/tmp/unicorn.sock fd=13
+I, [2013-08-18T01:43:40.437003 #2934]  INFO -- : master process ready
+I, [2013-08-18T01:43:40.488051 #2950]  INFO -- : worker=0 ready
+I, [2013-08-18T01:43:40.529858 #2953]  INFO -- : worker=1 ready
+D, [2013-08-18T13:46:09.972164 #2934] DEBUG -- : waiting 31.0s after suspend/hibernation
+D, [2013-08-19T20:55:57.671204 #2934] DEBUG -- : waiting 31.0s after suspend/hibernation
+D, [2013-08-20T22:19:49.320712 #2934] DEBUG -- : waiting 31.0s after suspend/hibernation
+D, [2013-08-24T10:27:52.457005 #2934] DEBUG -- : waiting 31.0s after suspend/hibernation
+D, [2013-08-24T11:49:04.580068 #2934] DEBUG -- : waiting 31.0s after suspend/hibernation
+D, [2013-08-24T12:34:59.400326 #2934] DEBUG -- : waiting 31.0s after suspend/hibernation
+D, [2013-08-24T16:38:49.558362 #2934] DEBUG -- : waiting 31.0s after suspend/hibernation
+D, [2013-08-24T18:34:38.330992 #2934] DEBUG -- : waiting 31.0s after suspend/hibernation
+D, [2013-08-25T11:19:23.744711 #2934] DEBUG -- : waiting 31.0s after suspend/hibernation
+/usr/local/lib/ruby/gems/1.9.1/gems/activesupport-3.2.14/lib/active_support/tagged_logging.rb:72: stack level too deep (SystemStackError)
+E, [2013-08-25T12:38:56.755806 #2934] ERROR -- : reaped #<Process::Status: pid 2953 exit 1> worker=1
+I, [2013-08-25T12:38:56.982934 #18627]  INFO -- : worker=1 ready
+I, [2013-08-25T12:39:48.673145 #2934]  INFO -- : reaped #<Process::Status: pid 2950 exit 0> worker=0
+I, [2013-08-25T12:39:48.673453 #2934]  INFO -- : reaped #<Process::Status: pid 18627 exit 0> worker=1
+I, [2013-08-25T12:39:48.673798 #2934]  INFO -- : master complete
