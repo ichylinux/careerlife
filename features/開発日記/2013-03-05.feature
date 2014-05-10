@@ -1,16 +1,23 @@
 # language: ja
 
-機能: 2013-11-12更新
+機能: 2014-05-10更新
 
-  シナリオ: Railsアプリを新規作成
-    * rails _3.2.15_ new careerlife -d mysql --skip-bundle
-  
   シナリオ: ライブラリをインストール
     以下のライブラリをインストールします。
+    <pre>
+      $ sudo yum install zlib-devel openssl-devel curl-devel readline-devel mysql-devel libxslt-devel libxml2-devel
+      $ sudo yum --enablerepo=epel install libyaml-devel nodejs
+    </pre>
 
-    daddy        ・・・ Railsアプリ開発をサポートするユーティリティ
-    therubyracer ・・・ ExecJS が利用するJavaScript実行環境。Chromeが搭載しているV8 Engineを利用。
-    unicorn      ・・・ アプリケーションサーバ
+  シナリオ: Railsアプリを新規作成
+    * rails _3.2.18_ new careerlife -d mysql --skip-bundle
+  
+  シナリオ: Gemライブラリの設定
+    <p>以下のGemライブラリを使用します。</p>
+    <ul>
+      <li>daddy        ・・・ Railsアプリ開発をサポートするユーティリティ</li>
+      <li>unicorn      ・・・ アプリケーションサーバ</li>
+    </ul>
 
     * Gemfileを編集
     * sudo bundle install

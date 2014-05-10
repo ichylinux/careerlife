@@ -1,9 +1,15 @@
 # coding: UTF-8
 
-もし /^rails _3.2.15_ new careerlife -d mysql --skip-bundle$/ do
+もし /^以下のライブラリをインストールします。$/ do |string|
+end
+
+もし /^rails _3.2.18_ new careerlife -d mysql --skip-bundle$/ do
   `rm -Rf /tmp/careerlife`
-  `cd /tmp && rails new careerlife -d mysql --skip-bundle`
+  `cd /tmp && rails _3.2.18_ new careerlife -d mysql --skip-bundle`
+  `cd /tmp/careerlife && sudo bundle install`
   puts "<pre>#{`cd /tmp/careerlife && tree .`}</pre>"
+  FileUtils.cp '/tmp/careerlife/Gemfile', File.dirname(__FILE__)
+  FileUtils.cp '/tmp/careerlife/Gemfile.lock', File.dirname(__FILE__)
 end
 
 前提 /^Gemfileを編集$/ do
