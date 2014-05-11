@@ -1,6 +1,6 @@
 # language: ja
 
-機能: 2013-11-01
+機能: 2014-05-11
 
   シナリオ: トップ画面を変更
     * rm public/index.html
