@@ -23,10 +23,9 @@ end
 end
 
 ならば /^経歴の入力欄が (.*?) つ表示される$/ do |count|
-  capture
-  
   tr_count = count.to_i + 2
-  assert_equal tr_count, find('table').all('tr').size
+  wait_until { find('table').all('tr').size == tr_count }
+  capture
 end
 
 もし /^経歴に以下の内容を入力する$/ do |ast_table|
