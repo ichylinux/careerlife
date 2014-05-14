@@ -5,39 +5,29 @@
   シナリオ: ライブラリをインストール
     以下のライブラリをインストールします。
     <pre>
-      $ sudo yum install zlib-devel openssl-devel curl-devel readline-devel mysql-devel libxslt-devel libxml2-devel
+      $ sudo yum groupinstall "Development Tools"
+      $ sudo yum install tree zlib-devel openssl-devel curl-devel readline-devel mysql-devel libxslt-devel libxml2-devel
+      $ sudo wget http://ftp-srv2.kddilabs.jp/Linux/distributions/fedora/epel/6/x86_64/epel-release-6-8.noarch.rpm
+      $ sudo rpm -Uvh epel-release-6-8.noarch.rpm
       $ sudo yum --enablerepo=epel install libyaml-devel nodejs
+      $ sudo yum update
+      $ wget http://cache.ruby-lang.org/pub/ruby/2.0/ruby-2.0.0-p451.tar.gz
+      $ tar zxf ruby-2.0.0-p451.tar.gz
+      $ cd ruby-2.0.0-p451
+      $ ./configure
+      $ make
+      $ sudo make install
+      $ sudo gem update --system
+      $ sudo gem install bundler
     </pre>
 
-  シナリオ: Railsアプリを新規作成
-    * rails _3.2.18_ new careerlife -d mysql --skip-bundle
-  
-  シナリオ: Gemライブラリの設定
-    <p>以下のGemライブラリを使用します。</p>
-    <ul>
-      <li>daddy        ・・・ Railsアプリ開発をサポートするユーティリティ</li>
-      <li>unicorn      ・・・ アプリケーションサーバ</li>
-    </ul>
-
-    * Gemfileを編集
-    * sudo bundle install
-
   シナリオ: Daddyをインストール
-    * rake dad:install
+    * sudo gem install daddy
 
-  シナリオ: Unicornをインストール
-    * rake dad:unicorn:install
+  シナリオ: dadコマンドでRailsアプリを新規作成
+    * dad new careerlife
   
-  シナリオ: Nginxをインストール
-    * rake dad:nginx:install
-
-  シナリオ: データベースを作成
-    * rake dad:db:config
-    * rake dad:db:create
-    * rake db:migrate
-
   シナリオ: アプリを機動
-    * sudo service nginx start
-    * sudo service unicorn_careerlife_dev start
-    * ブラウザで http://localhost にアクセス
+    * rails s
+    * ブラウザで http://localhost:3000 にアクセス
 
