@@ -1,6 +1,6 @@
 # language: ja
 
-機能: 2014-05-10更新
+機能:
 
   シナリオ: ライブラリをインストール
     以下のライブラリをインストールします。
@@ -21,13 +21,9 @@
       $ sudo gem install bundler
     </pre>
 
-  シナリオ: Daddyをインストール
+  シナリオ: アプリを新規作成
     * sudo gem install daddy
-
-  シナリオ: dadコマンドでRailsアプリを新規作成
     * dad new careerlife
-  
-  シナリオ: アプリを機動
     * rails s
     * ブラウザで http://localhost:3000 にアクセス
 
