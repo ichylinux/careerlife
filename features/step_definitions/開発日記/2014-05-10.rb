@@ -10,7 +10,7 @@ end
 end
 
 もし /^ルートパスの指定を変更$/ do
-  git_diff 'config/routes.rb', :as => 'edit', :from => 49, :to => 52
+  git_diff 'config/routes.rb', :as => 'edit'
 end
 
 もし /^rm public\/index\.html$/ do
