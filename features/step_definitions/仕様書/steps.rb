@@ -17,14 +17,13 @@ end
 end
 
 もし /^経歴を追加 を (.*?) 回クリック$/ do |count|
-  count.to_i.times do
+  count.to_i.times do |i|
     click_on '経歴を追加'
+    wait_until { find('table').all('tr').size == i + 3 }
   end
 end
 
 ならば /^経歴の入力欄が (.*?) つ表示される$/ do |count|
-  tr_count = count.to_i + 2
-  wait_until { find('table').all('tr').size == tr_count }
   capture
 end
 
@@ -33,7 +32,15 @@ end
   
   find('table').all('tr')[1..-2].each_with_index do |tr, i|
     tr.all('td')[0].find('input').set(table[i][0])
+
+    [1, 2].each do |col|
+      ymd = table[i][col]
+      ymd = ymd.split('-').map{|a| a.start_with?('0') ? a[1..-1] : a }
+      tr.all('td')[col].all('select')[0].find("option[value='#{ymd[0]}']").select_option
+      tr.all('td')[col].all('select')[1].find("option[value='#{ymd[1]}']").select_option
+      tr.all('td')[col].all('select')[2].find("option[value='#{ymd[2]}']").select_option
+    end
   end
-  
+
   capture
 end
