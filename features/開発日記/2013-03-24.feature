@@ -1,6 +1,6 @@
 # language: ja
 
-機能: 2013-03-24
+機能:
 
 シナリオ: Capistranoをインストール
   * Gemfileを編集
