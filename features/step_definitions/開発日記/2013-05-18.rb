@@ -5,7 +5,7 @@
 end
 
 前提 /^sudo bundle install$/ do
-  git_diff 'Gemfile.lock', :as => 'auto', :from => 206
+  git_diff 'Gemfile.lock', :as => 'auto', :from => 233
 end
 
 前提 /^rails g devise:install$/ do

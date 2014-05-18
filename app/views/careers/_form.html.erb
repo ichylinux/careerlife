@@ -43,7 +43,7 @@
     <% @career.career_details.each_with_index do |cd, i| %>
       <%= render 'career_detail_fields', :career_detail => cd, :index => i %>
     <% end %>
-  
+
     <tr>
       <td colspan="3">
         <a id="new_career_detail_link" href="#">経歴を追加</a>
@@ -63,7 +63,7 @@
       </td>
     </tr>
   </table>
-  
+
   <div class="actions">
     <%= f.submit %>
   </div>
