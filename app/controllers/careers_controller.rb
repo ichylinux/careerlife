@@ -1,5 +1,3 @@
-# coding: UTF-8
-
 class CareersController < ApplicationController
   before_filter :authenticate_user!
   
