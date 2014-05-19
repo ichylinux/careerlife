@@ -1,11 +1,26 @@
-# coding: UTF-8
+前提 /^ヘッダを修正$/ do
+  git_diff 'app/views/common/_header.html.erb'
+  assert_visit '/'
+end
+
+もし /^ヘルパーメソッドを読み込む$/ do
+  git_diff 'app/helpers/application_helper.rb'
+end
+
+もし /^改行して表示$/ do
+  git_diff 'app/views/careers/show.html.erb', :from => 23, :to => 32
+  
+  user = User.all.first
+  step "#{user.email} がログインしている"
+  step "キャリアの参照を表示する"
+end
 
 前提 /^Gemfile に jquery\-ui\-rails を追加$/ do
   git_diff 'Gemfile', :from => 24, :to => 27
 end
 
 前提 /^sudo bundle install$/ do
-  git_diff 'Gemfile.lock', :as => 'auto', :from => 222
+  git_diff 'Gemfile.lock', :as => 'auto', :from => 249
 end
 
 前提 /^アセットに datepicker を追加$/ do
@@ -27,4 +42,3 @@ end
   pause 3
   capture
 end
-

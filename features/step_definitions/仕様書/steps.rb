@@ -38,16 +38,14 @@ end
 end
 
 もし /^経歴を追加 を (.*?) 回クリック$/ do |count|
-  count.to_i.times do
+  count.to_i.times do |i|
     click_on '経歴を追加'
+    wait_until { find('table').all('tr').size == i + 3 }
   end
 end
 
 ならば /^経歴の入力欄が (.*?) つ表示される$/ do |count|
   capture
-  
-  tr_count = count.to_i + 2
-  assert_equal tr_count, find('table').all('tr').size
 end
 
 もし /^経歴に以下の内容を入力する$/ do |ast_table|
@@ -58,7 +56,7 @@ end
     tr.all('td')[1].find('input').set(table[i][1])
     tr.all('td')[2].find('input').set(table[i][2])
   end
-  
+
   capture
 end
 
