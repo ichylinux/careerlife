@@ -40,8 +40,9 @@ end
 end
 
 もし /^経歴を追加 を (.*?) 回クリック$/ do |count|
-  count.to_i.times do
+  count.to_i.times do |i|
     click_on '経歴を追加'
+    wait_until { find('table').all('tr').size == i + 3 }
   end
 end
 

@@ -1,5 +1,3 @@
-# coding: UTF-8
-
 class Career < ActiveRecord::Base
   belongs_to :user
   has_many :career_details
