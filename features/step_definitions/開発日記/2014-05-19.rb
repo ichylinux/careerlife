@@ -11,13 +11,19 @@ end
 end
 
 前提 /^sudo bundle install$/ do
-  git_diff 'Gemfile.lock', :as => 'auto'
+  git_diff 'Gemfile.lock', :as => 'auto', :from => 247
 end
 
 前提 /^Capfileを編集$/ do
-  diff 'Capfile', "/tmp/careerlife/Capfile"
+  diff 'Capfile', "/tmp/careerlife/Capfile", :as => ['auto', 'edit']
 end
 
 前提 /^deploy\.rbを編集$/ do
-  diff 'config/deploy.rb', "/tmp/careerlife/config/deploy.rb"
+  diff 'config/deploy.rb', "/tmp/careerlife/config/deploy.rb", :as => ['auto', 'edit']
+end
+
+前提 /^cap deploy:setup$/ do
+end
+
+前提 /^cap deploy:cold$/ do
 end

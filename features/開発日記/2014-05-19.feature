@@ -2,6 +2,15 @@
 
 機能:
 
+シナリオ: Capistranoをインストール
+  * Gemfileを編集
+  * sudo bundle install
+  * capify .
+
+シナリオ: デプロイの設定
+  * Capfileを編集
+  * deploy.rbを編集
+  
 シナリオ: サーバの環境構築
   初めてデプロイする時は、デプロイ対象サーバの環境構築を行う。
   * cap deploy:setup
