@@ -41,10 +41,13 @@ class Career < ActiveRecord::Base
   def work_experience
     months = work_experience_months
     if months >= 12
-      "#{months/12}年#{months%12}ヶ月"
+      ret = "#{months/12}年"
+      ret << "#{months%12}ヶ月" if months % 12 > 0
     else
-      "#{months%12}ヶ月"
+      ret ="#{months%12}ヶ月"
     end
+
+    ret
   end
 
 end
