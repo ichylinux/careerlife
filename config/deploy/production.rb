@@ -9,15 +9,6 @@ role :web, %w{localhost}
 role :db,  %w{localhost}
 
 
-# Extended Server Syntax
-# ======================
-# This can be used to drop a more detailed server definition into the
-# server list. The second argument is a, or duck-types, Hash and is
-# used to set extended properties on the server.
-
-server 'localhost', user: ENV['USER'], roles: %w{web app db}
-
-
 # Custom SSH Options
 # ==================
 # You may pass any option but keep in mind that net/ssh understands a
