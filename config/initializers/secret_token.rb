@@ -4,4 +4,4 @@
 # If you change this key, all old signed cookies will become invalid!
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-Careerlife::Application.config.secret_token = '2c098082164237a0be1e3c75c22b892639390b8759e30fa980b83feeb3d0af6bfd3523f578f8a0ac0c97a40da9091747d80cac437653a5cf4e6ad4f455b61eff'
+Careerlife::Application.config.secret_token = 'ac4227bae3809def9fda2a736818beb2dc09af6432a490a1ccb28381a5e1c2bfd8cf7b147218f9d87d6cb2f39ffe404356444971fefca33e5f402bc570f0275e'
