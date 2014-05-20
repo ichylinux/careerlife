@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.17'
+gem 'rails', '3.2.18'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -12,7 +12,7 @@ group :assets do
   gem 'coffee-rails', '~> 3.2.1'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  gem 'therubyracer', :platforms => :ruby
+  # gem 'therubyracer', :platforms => :ruby
 
   gem 'uglifier', '>= 1.0.3'
 end
@@ -35,10 +35,12 @@ end
 # gem 'jbuilder'
 
 # Use unicorn as the app server
-gem 'unicorn', :platforms => :ruby
+gem 'unicorn'
 
 # Deploy with Capistrano
-gem 'capistrano', '< 3.0.0'
+gem 'capistrano'
+gem 'capistrano-bundler'
+gem 'capistrano-rails'
 
 # To use debugger
 # gem 'debugger'
