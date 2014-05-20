@@ -2,6 +2,7 @@
 lock '3.2.1'
 
 set :application, 'careerlife'
+set :user, ENV['USER']
 set :repo_url, 'git://github.com/ichylinux/careerlife.git'
 
 # Default branch is :master
