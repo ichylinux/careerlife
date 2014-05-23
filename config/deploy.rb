@@ -2,8 +2,8 @@
 lock '3.2.1'
 
 set :application, 'careerlife'
-set :user, ENV['USER']
 set :repo_url, 'git://github.com/ichylinux/careerlife.git'
+set :user, ENV['USER']
 
 # Default branch is :master
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call
@@ -19,7 +19,7 @@ set :deploy_to, "/home/#{fetch(:user)}/apps/#{fetch(:application)}"
 # set :format, :pretty
 
 # Default value for :log_level is :debug
-# set :log_level, :debug
+set :log_level, ENV['LOG_LEVEL'] || :info
 
 # Default value for :pty is false
 # set :pty, true
