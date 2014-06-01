@@ -16,6 +16,7 @@ end
 
 前提 /^キャリアの参照に遷移$/ do
   assert_url '/careers/[0-9]+'
+  assert page.has_no_selector? 'div.errors'
 end
 
 前提 /^キャリアの一覧に遷移$/ do
