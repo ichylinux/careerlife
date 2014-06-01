@@ -56,9 +56,9 @@ end
   table = normalize_table(ast_table)[1..-1]
   
   find('table').all('tr')[1..-2].each_with_index do |tr, i|
-    tr.all('td')[0].find('input').set(table[i][0])
-    tr.all('td')[1].find('input').set(table[i][1])
-    tr.all('td')[2].find('input').set(table[i][2])
+    table.first.size.times do |j|
+      tr.all('td')[j].find('input').set(table[i][j])
+    end
   end
   
   capture
