@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130517043320) do
+ActiveRecord::Schema.define(:version => 20140601050335) do
 
   create_table "career_details", :force => true do |t|
     t.integer  "career_id",    :null => false
@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(:version => 20130517043320) do
     t.date     "end_date"
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
+    t.string   "role"
   end
 
   create_table "careers", :force => true do |t|

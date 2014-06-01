@@ -12,6 +12,7 @@ ja:
 
       career_detail: &career_detail
         project_name: プロジェクト名
+        role: 役割
         start_date: 開始日
         end_date: 終了日
 
