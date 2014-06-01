@@ -10,13 +10,13 @@ ja:
         introduction: 紹介文
         work_experience: 業務経験
 
-      career_detail:
+      career_detail: &career_detail
         project_name: プロジェクト名
         start_date: 開始日
         end_date: 終了日
 
       career_details:
-        project_name: プロジェクト名
+        <<: *career_detail
 
       user:
         age: 年齢
