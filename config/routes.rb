@@ -1,3 +1,3 @@
 Careerlife::Application.routes.draw do
-  root :to => 'top#index'
+  root 'welcome#index'
 end
