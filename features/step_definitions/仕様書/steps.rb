@@ -1,5 +1,3 @@
-# coding: UTF-8
-
 前提(/^トップページを表示$/) do
   assert_visit '/'
 end
@@ -25,6 +23,6 @@ end
 end
 
 前提 /^削除 をクリック$/ do
-  click_on '削除'
+  click_on '削除', :match => :first
   confirm
 end

@@ -1,6 +1,6 @@
 前提 /^rails g migration add_column_introduction_on_careers$/ do
-  diff 'db/migrate/20130308164115_add_column_introduction_on_careers.rb',
-      File.join(File.dirname(__FILE__), '20130308164115_add_column_introduction_on_careers.rb'),
+  diff 'db/migrate/20140814164115_add_column_introduction_on_careers.rb',
+      File.join(File.dirname(__FILE__), '20140814164115_add_column_introduction_on_careers.rb'),
       :as => ['auto', 'edit']
 end
 
@@ -18,5 +18,5 @@ end
 end
 
 前提 /^通知メッセージを修正$/ do
-  git_diff 'app/controllers/careers_controller.rb', :from => 42, :to => 82
+  git_diff 'app/controllers/careers_controller.rb', :from => 26, :to => 66
 end
