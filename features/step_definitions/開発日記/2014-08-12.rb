@@ -1,5 +1,3 @@
-# coding: UTF-8
-
 もし /^以下のライブラリをインストールします。$/ do |string|
 end
 
