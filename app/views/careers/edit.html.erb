@@ -1,6 +1,6 @@
-<h1>Editing career</h1>
+<div class="actions">
+  <%= link_to '一覧', careers_path %>
+  <%= link_to '参照', career_path(@career) %>
+</div>
 
 <%= render 'form' %>
-
-<%= link_to 'Show', @career %> |
-<%= link_to 'Back', careers_path %>

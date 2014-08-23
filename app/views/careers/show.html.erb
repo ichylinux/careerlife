@@ -1,24 +1,32 @@
-<p id="notice"><%= notice %></p>
+<div class="actions">
+  <%= link_to '一覧', careers_path %>
+  <%= link_to '編集', edit_career_path(@career) %>
+  <%= link_to '削除', career_path(@career), :method => 'delete', :confirm => '削除します。よろしいですか？' %>
+</div>
 
-<p>
-  <strong>Last name:</strong>
-  <%= @career.last_name %>
-</p>
-
-<p>
-  <strong>First name:</strong>
-  <%= @career.first_name %>
-</p>
-
-<p>
-  <strong>Birthday:</strong>
-  <%= @career.birthday %>
-</p>
-
-<p>
-  <strong>Gender:</strong>
-  <%= @career.gender %>
-</p>
-
-<%= link_to 'Edit', edit_career_path(@career) %> |
-<%= link_to 'Back', careers_path %>
+<table>
+  <tr>
+    <th><%= Career.human_attribute_name :last_name %></th>
+    <td><%= @career.last_name %></td>
+  </tr>
+  <tr>
+    <th><%= Career.human_attribute_name :first_name %></th>
+    <td><%= @career.first_name %></td>
+  </tr>
+  <tr>
+    <th><%= Career.human_attribute_name :birthday %></th>
+    <td><%= @career.birthday %></td>
+  </tr>
+  <tr>
+    <th><%= Career.human_attribute_name :gender %></th>
+    <td><%= @career.gender %></td>
+  </tr>
+  <tr>
+    <th><%= Career.human_attribute_name :created_at %></th>
+    <td><%= @career.created_at %></td>
+  </tr>
+  <tr>
+    <th><%= Career.human_attribute_name :updated_at %></th>
+    <td><%= @career.updated_at %></td>
+  </tr>
+</table>

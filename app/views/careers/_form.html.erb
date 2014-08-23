@@ -1,33 +1,31 @@
-<%= form_for(@career) do |f| %>
+<%= form_for @career do |f| %>
   <% if @career.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@career.errors.count, "error") %> prohibited this career from being saved:</h2>
-
+    <div class="errors">
       <ul>
-      <% @career.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
+        <% @career.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
       </ul>
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :last_name %><br>
-    <%= f.text_field :last_name %>
-  </div>
-  <div class="field">
-    <%= f.label :first_name %><br>
-    <%= f.text_field :first_name %>
-  </div>
-  <div class="field">
-    <%= f.label :birthday %><br>
-    <%= f.date_select :birthday %>
-  </div>
-  <div class="field">
-    <%= f.label :gender %><br>
-    <%= f.text_field :gender %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+  <table>
+    <tr>
+      <th><%= f.label :last_name %></th>
+      <td><%= f.text_field :last_name %></td>
+    </tr>
+    <tr>
+      <th><%= f.label :first_name %></th>
+      <td><%= f.text_field :first_name %></td>
+    </tr>
+    <tr>
+      <th><%= f.label :birthday %></th>
+      <td><%= f.text_field :birthday %></td>
+    </tr>
+    <tr>
+      <th><%= f.label :gender %></th>
+      <td><%= f.text_field :gender %></td>
+    </tr>
+  </table>
+  <%= f.submit %>
 <% end %>
