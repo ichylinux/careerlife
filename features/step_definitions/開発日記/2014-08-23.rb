@@ -9,5 +9,9 @@ end
 もし /^rake dad:generate:controller careers$/ do
 end
 
+もし /^ルーティングを追加$/ do
+  git_diff 'config/routes.rb'
+end
+
 もし /^rake dad:generate:view careers$/ do
 end

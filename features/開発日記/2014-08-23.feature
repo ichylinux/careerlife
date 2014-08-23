@@ -6,6 +6,7 @@
   * rails g model career last_name:string first_name:string birthday:date gender:string deleted:boolean
   * rake db:migrate
   * rake dad:generate:controller careers
+  * ルーティングを追加
   * rake dad:generate:view careers
 
 シナリオ: アクセスしてみる
