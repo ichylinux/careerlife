@@ -3,7 +3,7 @@
 機能:
 
   シナリオ: ライブラリをインストール
-    CentOS 6 に、以下のライブラリをインストールします。
+    CentOS 6.5 に、以下のライブラリをインストールします。
     <pre>
       $ sudo yum groupinstall "Development Tools"
       $ sudo yum install tree zlib-devel openssl-devel curl-devel readline-devel mysql-devel libxslt-devel libxml2-devel
@@ -14,7 +14,7 @@
       $ wget http://cache.ruby-lang.org/pub/ruby/2.0/ruby-2.0.0-p481.tar.gz
       $ tar zxf ruby-2.0.0-p481.tar.gz
       $ cd ruby-2.0.0-p481
-      $ ./configure
+      $ ./configure --disable-install-rdoc
       $ make
       $ sudo make install
       $ sudo gem update --system

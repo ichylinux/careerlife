@@ -1,5 +1,5 @@
 # MySQL.  Versions 4.1 and 5.0 are recommended.
-#
+# 
 # Install the MYSQL driver
 #   gem install mysql2
 #
@@ -11,6 +11,7 @@
 development:
   adapter: mysql2
   encoding: utf8
+  reconnect: false
   database: careerlife_dev
   pool: 5
   username: careerlife
@@ -23,6 +24,7 @@ development:
 test:
   adapter: mysql2
   encoding: utf8
+  reconnect: false
   database: careerlife_test
   pool: 5
   username: careerlife
@@ -32,6 +34,7 @@ test:
 production:
   adapter: mysql2
   encoding: utf8
+  reconnect: false
   database: careerlife_pro
   pool: 5
   username: careerlife
