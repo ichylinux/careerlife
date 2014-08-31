@@ -15,4 +15,5 @@ class Career < ActiveRecord::Base
       '女性'
     end
   end
+
 end
