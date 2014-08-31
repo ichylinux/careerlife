@@ -1,5 +1,3 @@
-# coding: UTF-8
-
 前提 /^レイアウトにヘッダを挿入$/ do
   git_diff 'app/views/layouts/application.html.erb'
 end
@@ -10,7 +8,7 @@ end
 
 前提 /^rails g model career_detail$/ do
   show 'app/models/career_detail.rb', :as => 'auto'
-  show 'db/migrate/20130308174601_create_career_details.rb', :as => ['auto', 'edit']
+  show 'db/migrate/20140831174601_create_career_details.rb', :as => ['auto', 'edit']
 end
 
 前提 /^rake db:migrate$/ do
@@ -23,5 +21,5 @@ end
 end
 
 前提 /^controller を修正$/ do
-  git_diff 'app/controllers/careers_controller.rb', :from => 26, :to => 43
+  git_diff 'app/controllers/careers_controller.rb', :from => 30, :to => 33
 end

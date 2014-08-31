@@ -9,9 +9,9 @@
 # from scratch. The latter is a flawed and unsustainable approach (the more migrations
 # you'll amass, the slower it'll run and the greater likelihood for issues).
 #
-# It's strongly recommended to check this file into your version control system.
+# It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130308174601) do
+ActiveRecord::Schema.define(version: 20140831174601) do
 
   create_table "career_details", :force => true do |t|
     t.integer  "career_id",    :null => false
@@ -22,14 +22,15 @@ ActiveRecord::Schema.define(:version => 20130308174601) do
     t.datetime "updated_at",   :null => false
   end
 
-  create_table "careers", :force => true do |t|
+  create_table "careers", force: true do |t|
     t.string   "last_name"
     t.string   "first_name"
     t.date     "birthday"
     t.string   "gender"
-    t.datetime "created_at",                   :null => false
-    t.datetime "updated_at",                   :null => false
-    t.string   "introduction", :limit => 1023
+    t.boolean  "deleted"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "introduction", limit: 1023
   end
 
 end
