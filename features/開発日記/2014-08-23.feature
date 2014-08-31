@@ -1,9 +1,10 @@
 # language: ja
 
-機能:
+機能: 2014-08-23
 
 シナリオ: キャリアの登録画面を作成
-  * rails g model career last_name:string first_name:string birthday:date gender:string deleted:boolean
+  * rails g model career last_name:string first_name:string birthday:date gender:string
+  * rails g migration add_column_deleted_on_careers
   * rake db:migrate
   * rake dad:generate:controller careers
   * ルーティングを追加
