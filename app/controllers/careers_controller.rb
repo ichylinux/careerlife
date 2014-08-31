@@ -33,7 +33,7 @@ class CareersController < ApplicationController
 
   def update
     @career = Career.find(params[:id])
-    @career.attributes = params[:career_params]
+    @career.attributes = career_params
 
     begin
       @career.transaction do
