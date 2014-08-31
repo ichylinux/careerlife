@@ -18,9 +18,9 @@ ActiveRecord::Schema.define(version: 20140823164115) do
     t.string   "first_name"
     t.date     "birthday"
     t.string   "gender"
-    t.boolean  "deleted"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "deleted",    default: false, null: false
     t.string   "introduction", limit: 1023
   end
 
