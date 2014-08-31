@@ -5,5 +5,5 @@ Careerlife::Application.routes.draw do
     end
   end
 
-  root :to => 'top#index'
+  root 'welcome#index'
 end
