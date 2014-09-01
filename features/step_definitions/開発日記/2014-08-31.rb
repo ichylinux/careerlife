@@ -21,5 +21,5 @@ end
 end
 
 前提 /^controller を修正$/ do
-  git_diff 'app/controllers/careers_controller.rb', :from => 30, :to => 33
+  git_diff 'app/controllers/careers_controller.rb', :from => 15, :to => 18
 end
