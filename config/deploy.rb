@@ -1,5 +1,5 @@
 # config valid only for Capistrano 3.1
-lock '3.2.1'
+lock '3.10.2'
 
 set :application, 'careerlife'
 set :repo_url, 'git://github.com/ichylinux/careerlife.git'
